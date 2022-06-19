@@ -8,6 +8,6 @@ User=get_user_model()
 class Post(models.Model):
     Title           = models.CharField(max_length=200)
     Text            = models.TextField()
-    Author          = models.ForeignKey(user, on_delete=models.CASCADE)
+    Author          = models.ForeignKey(User, on_delete=models.CASCADE)
     Created_date    = models.DateTimeField()
     Published_date  = models.DateTimeField()
